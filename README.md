@@ -65,24 +65,7 @@ Simple case
 - **Sea-land mask**: large-kernel blur + threshold isolates water; detections
   over land are dropped.
 
----
 
-## Verification
-
-The RTL is checked bit-for-bit against `python/cfar_reference.py`. Both
-testbenches pass across 6 random scenes.
-
-```bash
-apt-get install -y iverilog
-cd python && python3 cfar_reference.py            # generate vectors
-cd ../sim
-iverilog -g2012 -DSYNTHESIS -o core ../rtl/cfar2d.v tb_cfar2d.sv && vvp core
-iverilog -g2012 -DSYNTHESIS -o axis ../rtl/cfar2d.v ../rtl/cfar2d_axis.v tb_cfar2d_axis.sv && vvp axis
-# -> RESULT: PASS  (RTL matches golden model bit-for-bit)
-```
-
-On hardware, the demo notebook also asserts `HW == SW reference` for a single
-tile before running full scenes.
 
 ---
 
@@ -120,16 +103,9 @@ for the multipliers, low LUT/FF). Closes timing at 100 MHz.
 
 ---
 
-## Repository layout
 
-```
-rtl/        cfar2d.v, cfar2d_axis.v          synthesizable Verilog
-sim/        tb_cfar2d.sv, tb_cfar2d_axis.sv  self-checking testbenches
-python/     cfar_reference.py, sar_loader.py golden model + image loader
-notebooks/  cfar_sar_demo.ipynb              hardware demo
-data/       sample_*.png                     synthetic SAR test scenes
-images/     result figures
-```
+
+
 
 ## License
 MIT
