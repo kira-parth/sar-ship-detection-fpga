@@ -1,0 +1,13 @@
+*.bit
+*.hwh
+*.xsa
+*.jou
+*.log
+.Xil/
+vivado*/
+*_sim
+*.vcd
+__pycache__/
+*.pyc
+in.hex
+gold_det.hex
