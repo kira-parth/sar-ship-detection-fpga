@@ -10,7 +10,7 @@ cannot run economically at full data rate.
 
 Hardware is verified **bit-for-bit** against a NumPy reference model.
 
-![pipeline](images/pipeline_overview.png)
+<img width="1888" height="927" alt="image" src="https://github.com/user-attachments/assets/6ef4b222-31e6-448d-9e94-60cc814a4ca9" />
 
 ---
 
@@ -34,19 +34,16 @@ implemented division-free in fixed point.
 
 ---
 
-## Results on synthetic SAR (verified pipeline)
+## Results on synthetic SAR 
 
-**Complex scene — varying sea state, varied ship sizes.** CFAR's adaptive
-threshold finds ships in both calm and rough water with no re-tuning:
-22/22 ships, 0 false alarms.
+Simple case
+<img width="972" height="526" alt="image" src="https://github.com/user-attachments/assets/577b3e6f-7a69-401e-80c5-64c711f5b4af" />
 
-![complex](images/complex_detection.png)
 
-**Full coastal scene — detect, floor, land-mask.** Raw CFAR over-fires on land
-clutter (panel b); a brightness floor clears water speckle and an image-derived
-sea-land mask removes shoreline, concentrating detections on water targets.
+**Full coastal scene — detect, 
 
-![pipeline](images/pipeline_overview.png)
+<img width="645" height="641" alt="image" src="https://github.com/user-attachments/assets/ae1af47c-acbd-4165-a0cb-376f879ec9f9" />
+
 
 ---
 
