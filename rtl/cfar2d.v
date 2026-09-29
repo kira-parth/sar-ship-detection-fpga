@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+
 // ===========================================================================
 // cfar2d.v   (plain Verilog-2001/2005)
 // 2-D Cell-Averaging CFAR (CA-CFAR) detector.
