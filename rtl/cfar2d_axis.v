@@ -1,4 +1,4 @@
-`timescale 1ns/1ps
+
 // ===========================================================================
 // cfar2d_axis.v  (plain Verilog-2001/2005)
 // AXI4-Stream + frame-buffer wrapper around cfar2d for PYNQ AXI-DMA.
